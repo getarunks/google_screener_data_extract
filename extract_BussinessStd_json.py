@@ -85,7 +85,7 @@ class GoogleStockDataExtract(object):
         new_data_list = []
         for n in json_raw_data['searchresults']:
             stockName = n['compFormatted']+'-'+n['compId']
-            temp_stock_dict={'SYMBOL':n['compId'],
+            temp_stock_dict={'SYMBOL':n['stock_symb'],
                              'CompanyName':n['stock_name'],
                              'compId' :n['compId'],
                              'compFormat' :n['compFormatted'],
